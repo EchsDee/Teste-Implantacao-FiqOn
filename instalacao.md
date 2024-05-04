@@ -1,6 +1,6 @@
 # instalação
 clone este repositorio e dentro dele 
-use o npm para instalar o modulo do discord.js que utilizaremos para o processo.
+use o [npm](https://www.npmjs.com) para instalar o modulo do discord.js que utilizaremos para o processo.
 ```bash
 npm install discord.js
 ```

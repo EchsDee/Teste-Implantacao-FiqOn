@@ -1,8 +1,10 @@
-# Teste Implantação FiqOn
+# Teste Implantação FiqOn 
 
-teste para implantação na FiqOn
- 
- conforme a documentação tomei a liberdade de utilizar o Node.Js e para facilitar testes e o "front do processo" fiz ele rodar em um bot, logo seguirei com o processo de instalação e configuração do bot.
+<img src="images/giphy.gif" alt="gif" width="100"/> <img src="images/discordjs.png" alt="gif" width="100"/> <img src="images/node.png" alt="gif" width="100"/>
+
+
+
+ conforme a documentação tomei a liberdade de utilizar o Node.Js e para facilitar testes e o "front do processo" fiz ele rodar em um discord bot usando discord.js, logo seguirei com o processo de instalação e configuração do bot.
 
 ## o processo esta separado em 3 partes:
 
@@ -16,4 +18,4 @@ fico a disposição para qualquer duvida
 
 Jonas Lang. 
 
-![alt text](images/cayde6-thumbs-up.gif)
+![caydebanner](images/cayde6-thumbs-up.gif)
