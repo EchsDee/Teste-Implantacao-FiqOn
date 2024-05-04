@@ -1,6 +1,6 @@
 # Teste Implantação FiqOn 
 
-<img src="images/giphy.gif" alt="gif" width="100"/> <img src="images/discordjs.png" alt="gif" width="100"/> <img src="images/node.png" alt="gif" width="100"/>
+<img src="images/giphy.jpg" alt="gif" width="100"/> <img src="images/discordjs.png" alt="gif" width="100"/> <img src="images/node.png" alt="gif" width="100"/>
 
 
 
