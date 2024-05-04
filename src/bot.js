@@ -17,7 +17,7 @@ const client = new Client({
 
 const token = config.token;
 let validToken = '';
-const pillarDataList = [];
+const pillarDataList = []
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
@@ -222,6 +222,45 @@ async function sendCombinedData(combinedData, validToken) {
         req.write(data);
         req.end();
     });
+}
+
+
+async function fetchAndSendPillarData(message, page) {
+    const options = {
+        hostname: 'instance.fique.online',
+        port: 443,
+        path: `/webhook/merge/88d8701e-a1d6-4fee-b15b-53e90dc1d126/listar_pilares/76b07f1dbf18eabde7b8e3611ab078daa0f34b094cc9856d20d6d0b15fb3b7a99f697e451d?page=${page}&api_token=${validToken}`,
+        method: 'GET',
+    };
+
+    const responseData = await new Promise((resolve, reject) => {
+        const req = https.request(options, (res) => {
+            let responseData = '';
+            res.on('data', (chunk) => {
+                responseData += chunk;
+            });
+            res.on('end', () => {
+                resolve(responseData);
+            });
+        });
+
+        req.on('error', (error) => {
+            console.error('Error:', error);
+            reject(error);
+        });
+
+        req.end();
+    });
+
+    try {
+        console.log('Resposta da ', page, ':', responseData);
+        const responseJson = JSON.parse(responseData);
+        console.log('Retorno:', responseJson);
+        message.channel.send(`Pillar ${page + 1}: ${responseJson.data}`);
+    } catch (error) {
+        console.error('Error:', error);
+        message.channel.send('Um erro ocorreu :C.');
+    }
 }
 
 client.login(token);
